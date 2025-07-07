@@ -11,7 +11,7 @@ This project provides automated web scrapers for extracting public procurement t
 - 🇰🇷 **South Korea** – [g2b.go.kr](https://www.g2b.go.kr/)
 
 
-M## 🔍 Features
+## 🔍 Features
 
 - Automated scraping with Selenium WebDriver  
 - Translates non-English tender data into English using `deep-translator`  
@@ -37,9 +37,6 @@ Chrome and ChromeDriver must be installed.
 🚀 Usage
 Run any script individually:
 
-bash
-Copy
-Edit
 python italy_scrapper.py
 python japan_scrapper.py
 python macedonia_scrapper.py

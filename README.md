@@ -1,6 +1,8 @@
-﻿# Tender_scrapper
 
-This project includes automated web scraping tools for extracting public procurement tenders from four countries: Italy, Japan, Macedonia, and South Korea. It uses Python scripts built with Selenium to navigate each country’s government procurement website, collect tender details, translate non-English content into English, and export the results as Excel files for easy analysis.
+# Government Tender Scrapers 🌍
+
+This project provides automated web scrapers for extracting public procurement tender data from four countries: **Italy, Japan, Macedonia, and South Korea**. Using Selenium and translation tools, it captures relevant tender information and exports the data into structured Excel files for further analysis.
+
 ## 🌐 Supported Countries
 
 - 🇮🇹 **Italy** – [acquistinretepa.it](https://www.acquistinretepa.it)
@@ -9,47 +11,54 @@ This project includes automated web scraping tools for extracting public procure
 - 🇰🇷 **South Korea** – [g2b.go.kr](https://www.g2b.go.kr/)
 
 
-Main Features:
+M## 🔍 Features
 
-Uses Selenium WebDriver for automated browser interaction.
+- Automated scraping with Selenium WebDriver  
+- Translates non-English tender data into English using `deep-translator`  
+- Date/time formatting and deadline validation  
+- Supports pagination, dynamic content loading, and modal handling  
+- Exports data to Excel files for each country
+  
+## 📁 Folder Structure
 
-Translates fields like tender titles, agencies, and categories using deep-translator.
+├── italy_scrapper.py
+├── japan_scrapper.py
+├── macedonia_scrapper.py
+├── southkorea_scrapper.py
+├── /tenders/ # Output folder containing Excel files
 
-Handles date formatting and filters out expired tenders.
+## 🛠 Requirements
 
-Supports multi-page scraping, dynamic loading (like infinite scroll in South Korea), and modal window handling.
-
-Saves all collected data into structured Excel (.xlsx) files.
-
-Folder Contents:
-
-Each script file is dedicated to one country:
-
-italy_scrapper.py
-
-japan_scrapper.py
-
-macedonia_scrapper.py
-
-southkorea_scrapper.py
-
-Output files (Excel) are saved in a tenders/ folder. South Korea’s script also creates a log file named scraping_log.txt.
-
-How to Use:
-
-Install the required libraries:
-
-nginx
-Copy
-Edit
+Install the dependencies using pip:
 pip install selenium pandas openpyxl webdriver-manager deep-translator
-Run the script for the desired country:
 
-nginx
+Chrome and ChromeDriver must be installed.
+
+🚀 Usage
+Run any script individually:
+
+bash
 Copy
 Edit
 python italy_scrapper.py
-Follow the on-screen instructions (if any), and the Excel file will be saved locally.
+python japan_scrapper.py
+python macedonia_scrapper.py
+python southkorea_scrapper.py
+Each script will prompt for page range (if applicable) and save output Excel files in a local directory.
+
+📌 Notes
+Translation may fail for extremely long or malformed text.
+
+South Korea scraper includes scrolling logic for dynamically loading data.
+
+Macedonia scraper filters out expired tenders based on deadline validation.
+
+📄 License
+This project is released under the MIT License.
+
+🤝 Contributing
+Pull requests and suggestions are welcome! Feel free to fork and submit improvements.
+
 
 Things to Note:
 
@@ -58,7 +67,3 @@ The scripts handle various date formats and languages.
 Macedonian tenders are filtered to exclude expired entries.
 
 The South Korea script scrolls through dynamically loading tables and saves data in batches.
-
-License and Contributions:
-
-The project is licensed under the MIT License. Contributions (like feature improvements or support for more countries) are welcome. You can fork the project or submit a pull request.

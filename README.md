@@ -43,12 +43,14 @@ python macedonia_scrapper.py
 python southkorea_scrapper.py
 Each script will prompt for page range (if applicable) and save output Excel files in a local directory.
 
-📌 Notes
+📌 Notes:
+
 Translation may fail for extremely long or malformed text.
 
-South Korea scraper includes scrolling logic for dynamically loading data.
+The scripts handle various date formats and languages.
 
-Macedonia scraper filters out expired tenders based on deadline validation.
+South Korea scraper includes scrolling logic for dynamically loading tables and saves data in batches.
+
 
 📄 License
 This project is released under the MIT License.
@@ -57,10 +59,3 @@ This project is released under the MIT License.
 Pull requests and suggestions are welcome! Feel free to fork and submit improvements.
 
 
-Things to Note:
-
-The scripts handle various date formats and languages.
-
-Macedonian tenders are filtered to exclude expired entries.
-
-The South Korea script scrolls through dynamically loading tables and saves data in batches.
